@@ -1,0 +1,5 @@
+/node_modules
+/data.txt
+/chatapp.zip
+.env
+package-lock.json

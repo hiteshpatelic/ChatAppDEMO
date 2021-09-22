@@ -1,0 +1,68 @@
+
+.container{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: rgb(23,76,187);
+    color: white;
+    background: linear-gradient(0deg, rgba(23,76,187,1) 0%, rgba(0,164,255,1) 100%);
+}
+.container .form .input{
+    padding: 10px 0;
+}
+.container .form {
+    width: 350px;
+}
+.container .form .input input {
+    color: white;
+    width: 85%;
+    background-color: rgba(255, 255, 255, 0.233);
+    border: none;
+    border-radius: 5px;
+    padding: 15px 25px;
+    letter-spacing: 1px;
+    margin: 10px 0;
+    box-shadow: 0px 2px 5px 0px rgba(255, 203, 203, 0.664);
+}
+.container .form .input input:focus{
+    outline: none;
+}
+.container .form .input input::placeholder{
+    color: white;
+    opacity: 0.5;
+}
+.container .form .input label{
+    font-size: 12px;
+}
+.container .form .forgotpass{
+    font-size: 12px;
+}
+.container .form .forgotpass .remember{
+    padding: 10px 0;
+}
+.container .form .forgotpass a, .container .form .signUp a{
+   color: white;
+}
+.container .form .btn{
+    margin: 10px 0;
+}
+.container .form .btn button{
+    width: 100%;
+    padding: 10px 0;
+    border: none;
+    border-radius: 50px;
+}
+.container .form .signUp{
+    margin-top: 50px;
+    text-align: center;
+}
+.container .form .signUp h3{
+    font-size: 13px;
+    font-weight: 100;
+}
+.container .form .signUp h3 b{
+    font-weight: 700;
+}

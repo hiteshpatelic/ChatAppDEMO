@@ -1,0 +1,36 @@
+
+<div class="container">
+    <h1>Sign Up</h1>
+    
+    <div class="form">
+        <form action="/register" method="POST">
+            <div class="input">
+                <label for="Name">User name</label>
+                <br>
+               
+                <% if(error !== undefined) {
+                     if(error.context.label === "userName"){%>
+                        <p class="error"> <%= error.message %>  </p>
+                <% }} %>
+                <input type="text" placeholder="Enter your username" name="userName">
+            </div>
+            <div class="input">
+                <label for="password">Password</label>
+                <br>
+                <% if(error !== undefined) {
+                    if (error.context.label === "password") {%>
+                        <p class="error"><%= error.message %> password error</p>
+                <% }} %>
+                <input type="password" placeholder="*******"  name="password">
+            </div>
+            
+            <div class="btn">
+                <button type="submit">Submit</button>
+            </div>
+        </form>
+        <div class="signUp">
+            <h3> - OR - </h3>
+            <h3>Alredy have account ? <b><a href="/login">Sign In</a></b></h3>
+        </div>
+    </div>
+</div>

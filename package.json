@@ -1,0 +1,35 @@
+{
+  "name": "chatapp",
+  "version": "1.0.0",
+  "description": "socket io live ",
+  "main": "app.js",
+  "scripts": {
+    "test": "nodemon app.js",
+    "start": "nodemon app.js"
+  },
+  "keywords": [
+    "socket.io",
+    "express",
+    "ejs"
+  ],
+  "author": "hitesh.chaudhari",
+  "license": "ISC",
+  "dependencies": {
+    "amqplib": "^0.8.0",
+    "bcrypt": "^5.0.1",
+    "body-parser": "^1.19.0",
+    "cryptr": "^6.0.2",
+    "dotenv": "^10.0.0",
+    "ejs": "^3.1.6",
+    "express": "^4.17.1",
+    "express-ejs-layouts": "^2.5.1",
+    "express-session": "^1.17.2",
+    "joi": "^17.4.2",
+    "mongoose": "^6.0.4",
+    "node-localstorage": "^2.2.1",
+    "nodemon": "^2.0.12",
+    "redis": "^3.1.2",
+    "socket.io": "^4.2.0",
+    "start": "^5.1.0"
+  }
+}

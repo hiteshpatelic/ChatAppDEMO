@@ -1,0 +1,107 @@
+h1, h2, h3, h4{
+    margin: 10px;
+}
+.container{
+    display: grid;
+    height: 100vh;
+    grid-template-columns: 1fr 3fr 1fr;
+    background-color: #8BC6EC;
+    background-image: linear-gradient(135deg, #8BC6EC 0%, #9599E2 100%);
+
+}
+.container .chat{
+    background-color: #ffffff33;
+    margin: 50px;
+    padding: 20px;
+}
+
+.container .sidebar .title{
+    padding: 10px;
+}
+.container .sidebar .profile{
+    background-color: #ffffff69;
+    padding: 20px 10px;
+    margin: 10px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container .sidebar .room{
+    padding: 10px;
+}
+.container .sidebar .room .roomList, .chatList{
+    transition: 0.2s;
+    padding:  10px;
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.container .sidebar .room .roomList:hover, .chatList:hover{
+    background-color: #ffffff69;
+}
+.container .chat {
+    position: relative;
+}
+
+.container .chat .send{
+    position: absolute;
+    bottom: 10px;
+    width: 92%;
+}
+.container .chat .input{
+    display: flex;
+    justify-content: space-around;
+}
+.container .chat .input input{
+    flex-grow: 4;
+    margin-right: 10px;
+    padding: 10px 25px;
+    box-shadow: 0px 0px 5px #9599E2;
+    letter-spacing: 1px;
+}
+.container .chat .input button{
+    padding: 0 25px;
+}
+.container .chat .input button i{
+    color: #0b75ff;
+    text-shadow: 0px 0px 5px rgb(255, 255, 255);
+}
+
+.container .chat #chatContainer{
+    display: grid;
+    padding: 10px;
+    width: 100%;
+    max-height: 75vh;
+    overflow-y: scroll;
+}
+.container .chat #chatContainer .SelfMessage{
+    text-align: right;
+}
+.authorInfo{
+    margin: 5px ;
+    font-size: 10px;
+    opacity: 0.5;
+}
+#logout{
+    padding: 10px 75px ;
+    margin: 10px;
+}
+
+.activeUser{
+    background-color: #ffffff69;
+}
+.userOnline{
+    font-size: 10px;
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(47, 255, 116);
+    border-radius: 5px;
+}
+.rightsidebar{
+    padding: 50px 25px  0 0 ;
+}

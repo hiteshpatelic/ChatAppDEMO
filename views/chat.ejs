@@ -1,0 +1,87 @@
+<div class="container">
+    <div class="sidebar">
+        <div class="title">
+            <h1>_Chat_app</h1>
+        </div>
+        <div class="profile">
+            <p id="userName"><%- name %></p>
+        </div>
+        <form action="/login/logout" method="POST">
+            <button id="logout"type="submit">LogOut</button>
+        </form>
+        <div class="room">
+            <h4>Private chat</h4>
+            <% if(data[0]){
+                data.map(e=>{ %>
+                    <div class="chatList">
+                        <p><%- e.userName %></p>
+                    </div>
+                <% })
+            }%> 
+            <h4>Active Room</h4>
+            <% if(groupList[0]){
+                groupList.map(e=>{ %>
+                    <div class="roomList">
+                        <p key="<%- e.groupId %>"><%- e.groupName %></p>
+                    </div>
+                <% })
+            }%>
+        </div>
+        
+    </div>
+    <div class="chat">
+       
+    </div>
+    <div class="rightsidebar">
+        <h4>Add contact </h4>
+        <form action="/addContact" method="POST">
+            <div class="input">
+                <label for="userName">Username</label>
+                <input type="text" name="userName" id="" placeholder="Enter userName">
+            </div>
+            <% if(error !== undefined){
+                if(error.addContact){ %>
+                    <p class="error"><%- error.addContact %></p>
+            <% }} %>
+            <% if(succsess !== undefined){
+                if(succsess.addContact){ %>
+                    <p class="succsess"><%- succsess.addContact %></p>
+            <% }} %>
+            <div class="btn">
+                <button type="submit">Add Contact</button>
+            </div>
+        </form>
+        <h4>Create Group</h4>
+        <form action="/createGroup" method="POST">
+            <div class="input">
+                <label for="groupName">Group Name</label>
+                <input type="text" name="groupName" id="" placeholder="Enter group name ">
+            </div>
+            <% if(error !== undefined){
+                if(error.groupCreationError){ %>
+                    <p class="error"><%- error.groupCreationError %></p>
+            <% }} %>
+            <% if(succsess !== undefined){
+                if(succsess.groupCreationDone){ %>
+                    <p class="succsess"><%- succsess.groupCreationDone %></p>
+            <% }} %>
+            <div class="btn">
+                <button type="submit">Create Group</button>
+            </div>
+        </form>
+
+        <!--<h4>Join Group</h4>
+        <form action="/joinGroup" method="POST">
+            <div class="input">
+                <label for="group">Group Id</label>
+                <input type="text" name="group" id="" placeholder="Enter group id ">
+            </div>
+            <div class="btn">
+                <button type="submit">Join Group</button>
+            </div>
+        </form>-->
+        
+        
+
+    </div>
+</div>
