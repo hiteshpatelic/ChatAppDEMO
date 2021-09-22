@@ -25,7 +25,7 @@ app.use(express.json());
 const urlencodedParser = bodyParser.urlencoded({ extended :true })
 app.use(express.urlencoded({ extended : true}));
 const port = process.env.PORT || 8100;
-const url = `http://localhost:${port}`
+const url = `https://chatappic.herokuapp.com`
 
 
 
