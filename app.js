@@ -52,30 +52,6 @@ app.use('/message', urlencodedParser, messageRouter);
 
 
 
-amqp.connect(process.env.AMQP_URI, (err, connection) => {
-  if (err) throw err;
-  mqconn = connection;
-  connection.createChannel((err, channel) => {
-    if (err) throw err;
-    let queueName = "chat_demo";
-    channel.assertExchange(queueName, "fanout", {
-      durable: false,
-    });
-
-    channel.assertQueue("",{exclusive: true}, (error, q)=> {
-        if (error) throw error;
-        channel.bindQueue(q.queue, queueName, "");
-        channel.consume(q.queue, (msg) => {
-          if (msg.content) {
-            channel.ack(msg);
-            const data = JSON.parse(msg.content.toString())
-            io.emit("chat", data);
-          }
-        });
-      }
-    );
-  });
-});
 
 
 io.on("connection", (socket) => {
